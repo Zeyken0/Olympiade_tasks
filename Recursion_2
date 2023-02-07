@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int recursion(int temp, int value){
+  if(value<1){
+    cout<<temp;
+    return 0;
+  }
+  else{
+    temp += value%10;
+    value /=10;
+    recursion(temp, value);
+    return temp;
+  }
+}
+
+int main() {
+    int input_val;
+    int temp = 0;
+    cin>>input_val;
+    recursion(temp, input_val);
+    return 0;
+}
+
